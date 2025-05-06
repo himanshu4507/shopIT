@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent">
+
+
+    <!-- ImageView for background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signuppg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/signinbg"
+        android:scaleType="fitXY" />
+
+    <!-- Small black shop image -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shopitsmallblack"
+        app:layout_constraintTop_toBottomOf="@id/signuppg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:translationY="-40dp"
+        android:src="@drawable/shopitsmallblack" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/getstarted"
+        app:layout_constraintTop_toBottomOf="@id/shopitsmallblack"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/get_started"
+        android:textSize="24sp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:translationY="-10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signuptext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/getstarted"
+        android:text="@string/signuppagetext"
+        android:layout_marginHorizontal="24dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/montserrat"
+        />
+
+    <!-- Email title text -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailtitle"
+        android:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintTop_toBottomOf="@id/signuptext"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/email"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:textSize="16sp"
+        android:translationY="-10dp"/>
+
+    <!-- Email EditText -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:id="@+id/editemailsignup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailtitle"
+        android:background="@drawable/buttonbg2"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/example_gmail_com"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:translationY="-10dp"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:id="@+id/continuebtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editemailsignup"
+        android:background="@drawable/buttonbg1"
+        app:backgroundTint="@null"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Continue"
+        android:textSize="16sp"
+        android:translationY="-10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alreadyHaveAccountText"
+        app:layout_constraintTop_toBottomOf="@id/continuebtn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/already_have_an_account"
+        android:textSize="14sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:translationY="-10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/registertext"
+        app:layout_constraintTop_toBottomOf="@id/continuebtn"
+        app:layout_constraintStart_toEndOf="@id/alreadyHaveAccountText"
+        android:text="@string/sign_in"
+        android:textSize="14sp"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginTop="8dp"
+        android:translationY="-10dp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orsigninwith"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alreadyHaveAccountText"
+        android:src="@drawable/orsigninwith"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:translationY="-10dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orsigninwith"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/buttonbg2"
+        app:icon="@drawable/googleicon"
+        app:iconTint="@null"
+        app:backgroundTint="@null"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        android:text="@string/sign_in_with_google"
+        android:textSize="14sp"
+        android:textColor="#17202A"
+        android:fontFamily="@font/montserrat_semibold"
+        android:translationY="-10dp"
+        />
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/shopitsmallblack"
+        android:layout_marginBottom="16dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
