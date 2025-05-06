@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent">
+
+
+
+    <!-- ImageView for background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signuppg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/signinbg"
+        android:scaleType="fitXY" />
+
+    <!-- Small black shop image -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shopitsmallblack"
+        app:layout_constraintTop_toBottomOf="@id/signuppg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:translationY="-40dp"
+        android:src="@drawable/shopitsmallblack" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/otpverification"
+        app:layout_constraintTop_toBottomOf="@id/shopitsmallblack"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/otp_verification"
+        android:textSize="24sp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:translationY="-10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/enterotptext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otpverification"
+        android:text="@string/enter_otp_sent_to"
+        android:layout_marginHorizontal="24dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/montserrat"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/originalemail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterotptext"
+        android:text="@string/example_gmail"
+        android:layout_marginHorizontal="24dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/montserrat"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/entre6digitOTPtext"
+        android:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintTop_toBottomOf="@id/originalemail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/enter_6_digit_otp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:textSize="16sp"
+        android:translationY="-10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/otp"
+        app:layout_constraintTop_toBottomOf="@id/entre6digitOTPtext"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="24dp"
+        >
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="@string/_0"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:background="@drawable/buttonbg2"
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:hint="@string/_0"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:background="@drawable/buttonbg2"
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:hint="@string/_0"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:background="@drawable/buttonbg2"
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:hint="@string/_0"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:background="@drawable/buttonbg2"
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:hint="@string/_0"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:background="@drawable/buttonbg2"
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:hint="@string/_0"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:background="@drawable/buttonbg2"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resendotp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:textSize="16sp"
+        android:text="Resend OTP in 00:59 second(s)"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:id="@+id/continuebtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resendotp"
+        android:background="@drawable/buttonbg1"
+        app:backgroundTint="@null"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Continue"
+        android:textSize="16sp"
+        android:translationY="-10dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
