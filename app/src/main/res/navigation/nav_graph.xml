@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authEntry">
+
+    <fragment
+        android:id="@+id/authEntry"
+        android:name="com.example.shopit.AuthEntry"
+        android:label="AuthEntry" >
+        <action
+            android:id="@+id/action_authEntry_to_authSignIn2"
+            app:destination="@id/authSignIn2" />
+        <action
+            android:id="@+id/action_authEntry_to_authSignUp"
+            app:destination="@id/authSignUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/authSignIn2"
+        android:name="com.example.shopit.AuthSignIn"
+        android:label="AuthSignIn" />
+    <fragment
+        android:id="@+id/authSignUp"
+        android:name="com.example.shopit.AuthSignUp"
+        android:label="AuthSignUp" >
+        <action
+            android:id="@+id/action_authSignUp_to_OTPSignUp"
+            app:destination="@id/OTPSignUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPSignUp"
+        android:name="com.example.shopit.OTPSignUp"
+        android:label="OTPSignUp" />
+
+</navigation>

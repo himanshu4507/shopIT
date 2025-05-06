@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent">
+
+    <!-- ImageView for background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signinpg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/signinbg"
+        android:scaleType="fitXY" />
+
+    <!-- Small black shop image -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shopitsmallblack"
+        app:layout_constraintTop_toBottomOf="@id/signinpg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:translationY="-40dp"
+        android:src="@drawable/shopitsmallblack" />
+
+    <!-- Sign-in title text -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signyou"
+        app:layout_constraintTop_toBottomOf="@id/shopitsmallblack"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/let_s_sign_you_in"
+        android:textSize="24sp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:translationY="-10dp"/>
+
+    <!-- Email title text -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailtitle"
+        android:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintTop_toBottomOf="@id/signyou"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/email_phone_no"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:textSize="16sp"
+        android:translationY="-10dp"/>
+
+    <!-- Email EditText -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:id="@+id/editemailsignin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailtitle"
+        android:background="@drawable/buttonbg2"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/example_gmail_com"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:translationY="-10dp"
+        />
+
+    <!-- Password text -->
+    <TextView
+        android:id="@+id/passtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/password"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editemailsignin"
+        android:translationY="-10dp"/>
+
+    <!-- Password input field with end icon for visibility toggle -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/passeye"
+        app:layout_constraintTop_toBottomOf="@id/passtext"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        app:boxStrokeWidth="1dp"
+        android:translationY="-10dp"
+        >
+
+        <!-- Password EditText inside TextInputLayout -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:inputType="textPassword"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forgetpass"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Forgot password?"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pass"
+        tools:ignore="HardcodedText"
+        android:translationY="-10dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:id="@+id/signinbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forgetpass"
+        android:background="@drawable/buttonbg1"
+        app:backgroundTint="@null"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Sign In"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText"
+        android:translationY="-10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dontHaveAccountText"
+        app:layout_constraintTop_toBottomOf="@id/signinbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/don_t_have_an_account"
+        android:textSize="14sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:translationY="-10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/registertext"
+        app:layout_constraintTop_toBottomOf="@id/signinbtn"
+        app:layout_constraintStart_toEndOf="@id/dontHaveAccountText"
+        android:text="@string/register"
+        android:textSize="14sp"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginTop="8dp"
+        android:translationY="-10dp"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orsigninwith"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dontHaveAccountText"
+        android:src="@drawable/orsigninwith"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:translationY="-10dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orsigninwith"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/buttonbg2"
+        app:icon="@drawable/googleicon"
+        app:iconTint="@null"
+        app:backgroundTint="@null"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        android:text="@string/sign_in_with_google"
+        android:textSize="14sp"
+        android:textColor="#17202A"
+        android:fontFamily="@font/montserrat_semibold"
+        android:translationY="-10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
