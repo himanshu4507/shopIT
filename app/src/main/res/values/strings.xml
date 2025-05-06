@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">shopIT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hurry_up">Hurry Up!</string>
+    <string name="hurryuptext">The Best Deals are just one step away from you. Order products at their lowest price. Sign up Now.</string>
+    <string name="i_m_new_here">I’m new here</string>
+    <string name="i_m_already_member">I’m already member</string>
+    <string name="let_s_sign_you_in">Let’s Sign You In</string>
+    <string name="email_phone_no">Email/Phone No.</string>
+    <string name="example_gmail_com">example@gmail.com</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="register">Register</string>
+    <string name="sign_in_with_google">Sign In with Google</string>
+    <string name="get_started">Get Started</string>
+    <string name="signuppagetext">Enter your email address to continue, we will send you an OTP to verify.</string>
+    <string name="email">Email</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="enter_otp_sent_to">Enter OTP sent to</string>
+    <string name="example_gmail">example@gmail.com</string>
+    <string name="enter_6_digit_otp">Enter 6 digit OTP</string>
+    <string name="_0">0</string>
 </resources>
